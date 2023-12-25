@@ -393,7 +393,7 @@ class CacheKey
         return $result;
     }
 
-    private function processEnum(\BackedEnum|\UnitEnum|string $value): string
+    private function processEnum(\BackedEnum|\UnitEnum|string|null $value): string|null
     {
         if ($value instanceof \BackedEnum) {
             return $value->value;
